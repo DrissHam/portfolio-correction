@@ -112,8 +112,13 @@ ANCHOR .inline-block {
 /* ANCHOR FLEX Items */
 
 .f-s {
-    flex: 1 1 150px;
+    flex: 1 1 120px;
 }
+
+.f-m {
+    flex: 1 1 300px;
+}
+
 
 
 /* ANCHOR Spacing  */
