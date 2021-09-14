@@ -38,11 +38,14 @@ footer {
 
 aside {
     flex: 1 1 300px;
+    background-image: url('./images/bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 main {
     min-height: calc(100vh - 2 * var(--header-height));
-    flex: 1 1 600px;
+    flex: 2 1 600px;
 }
 
 h1,
@@ -137,6 +140,14 @@ ANCHOR .inline-block {
 
 /* ANCHOR COMPONENTS  */
 
+.main-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    /* passer en avant plan */
+}
+
 .main-header__logo-img {
     display: block;
     max-width: 150px;
@@ -185,9 +196,12 @@ ANCHOR .inline-block {
     padding: 1rem;
 }
 
-card {
+.card {
     margin-top: 16px;
     box-shadow: 0 0 16px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: var(--header-height);
+
 }
 
 .card__img {
@@ -205,4 +219,9 @@ card {
     left: -16px;
     opacity: 0.5;
     mix-blend-mode: color-burn;
+}
+
+
+.main-container {
+    margin-top: var(--header-height);
 }
