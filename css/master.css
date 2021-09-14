@@ -17,7 +17,8 @@
 
 }
 
-img {
+img,
+video {
     width: 100%;
 }
 
@@ -28,8 +29,8 @@ body {
     font-size: large;
 }
 
-header,
-footer {
+.main-header,
+.main-footer {
     min-height: var(--header-height);
     background-color: var(--dark);
     color: var(--white);
@@ -122,13 +123,20 @@ ANCHOR .inline-block {
     flex: 1 1 300px;
 }
 
-
+.f-l {
+    flex: 1 1 400px;
+}
 
 /* ANCHOR Spacing  */
 
 .p-1 {
     padding: 1rem;
     /*1rem=16px */
+}
+
+my-4 {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
 }
 
 /* ANCHOR TYPO */
@@ -201,6 +209,7 @@ ANCHOR .inline-block {
     box-shadow: 0 0 16px rgba(0, 0, 0, 0.2);
     position: sticky;
     top: var(--header-height);
+    background-color: white;
 
 }
 
@@ -224,4 +233,55 @@ ANCHOR .inline-block {
 
 .main-container {
     margin-top: var(--header-height);
+}
+
+.shadow {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.form-contact {
+    width: 100%;
+    display: grid;
+    /*PARENT*/
+    grid-template-areas:
+        "prenom nom"
+        "tel email"
+        "subject subject"
+        "message message"
+        ". button";
+    grid-row: ;
+}
+
+/*ENFANTS*/
+.form-contact__item--prenom {
+    grid-area: prenom;
+}
+
+.form-contact__item--nom {
+    grid-area: nom;
+}
+
+.form-contact__item--email {
+    grid-area: email;
+}
+
+.form-contact__item--tel {
+    grid-area: tel;
+}
+
+.form-contact__item--subject {
+    grid-area: subject;
+}
+
+.form-contact__item--message {
+    grid-area: message;
+}
+
+.form-contact__item--button {
+    grid-area: button;
+}
+
+.form-contact__item>* {
+    /*Séléctionner les enfants  directs*/
+    width: 100%;
 }
